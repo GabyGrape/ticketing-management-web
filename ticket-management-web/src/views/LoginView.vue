@@ -13,7 +13,7 @@ const handleLogin = async () => {
 
   try {
     const response = await axios.post(
-      'http://127.0.0.1:8080/api/auth/login', 
+      'import.meta.env.VITE_AUTH_API_URL', 
       {
         username: username.value.trim(),
         password: password.value.trim()
