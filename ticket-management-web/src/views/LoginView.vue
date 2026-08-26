@@ -13,7 +13,7 @@ const handleLogin = async () => {
 
   try {
     const response = await axios.post(
-      'import.meta.env.VITE_AUTH_API_URL', 
+      import.meta.env.VITE_AUTH_API_URL, 
       {
         username: username.value.trim(),
         password: password.value.trim()
