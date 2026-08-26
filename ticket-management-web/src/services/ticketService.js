@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'import.meta.env.VITE_TICKETING_API_URL';
+const API_BASE_URL = import.meta.env.VITE_TICKETING_API_URL;
 
 // Helper function untuk mengambil header Authorization (JWT Token)
 const getAuthHeader = () => {
