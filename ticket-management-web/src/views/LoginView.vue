@@ -20,11 +20,12 @@ const handleLogin = async () => {
       },
       {
         headers: { 'Content-Type': 'application/json' },
-
       }
     )
 
-    const token = response.data.token
+    // ✅ FIX: Ambil token dari response.data.data.token
+    const token = response.data?.data?.token
+
     if (!token) {
       throw new Error('Response server tidak mengandung token.')
     }
